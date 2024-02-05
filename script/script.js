@@ -28,6 +28,7 @@ const texts =[
 
 const leftButtonNode = document.getElementById("left-button");
 const rightButtonNode = document.getElementById("right-button");
+//const [leftButtonNode, rightButtonNode] = document.querySelectorAll("button"); можно с помощью реструктуризацией задать кнопки-стрелки
 const textNode = document.querySelector(".current_text p");
 
 let i = 0;
@@ -66,6 +67,14 @@ function createButton(array){
 return container;
 };
 root.append(createButton(texts));
+
+const r=123;
+const g=202;
+const b=189;
+// const res = "rgb("+r+", "+g+", "+b+");" - конкатенация
+// console.log(res);
+const res = `rgb(${r}, ${g}, ${b});` // - интерполяция
+console.log(res);
 
 
 // const btnsNodeList = document.querySelectorAll(".btns button");//сложили эл-ты по тэгу button в NodeList
